@@ -5,7 +5,7 @@
   Task Status
   <div *ngFor="let task of tasks, let i = index;">
       <ul [ngClass]="task.isCompleted ? 'completed' : 'incomplete'">
-        <input type="checkbox" value="task.isCompleted" (change)="updateVal(i, $event.target.checked)">
+        <input type="checkbox" [checked]="task.isCompleted" (change)="updateVal(i, $event.target.checked)">
         {{task.taskName}}
       </ul>
   </div>
