@@ -13,4 +13,5 @@
 <div class="row" [formGroup]="localGroup" class="panel-body col-12">
   <input type="text" class="bootstrap fullscreen" formControlName="taskName" required placeholder="Enter task here">
   <button type="submit" class="btn btn-primary" (click)="addTask()" [disabled]="!localGroup.valid" title="Please enter task to submit" > Add Task</button>
+  <button type="submit" class="btn btn-primary" (click)="deleteLocalStorage()" > Clear Tasks List</button>
 </div>

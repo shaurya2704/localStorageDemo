@@ -75,8 +75,11 @@ export class AppComponent implements OnInit {
       this.tasks[i]['isCompleted'] = event;
     }
     localStorage.setItem(allTasks, JSON.stringify(this.tasks))
+  }
 
-
+  deleteLocalStorage() {
+    localStorage.removeItem(allTasks);
+    window.location.reload();
   }
 }
 
